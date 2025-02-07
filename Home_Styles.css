@@ -1,0 +1,747 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #2c2d2d, #232323);
+    background-attachment: fixed;
+    background-color: #0d0d0d; /* Fallback solid color */
+    color: #fff;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Add subtle neon glow effect */
+.hero {
+    position: relative;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+    background: radial-gradient(circle at top, rgba(0, 255, 204, 0.2), transparent),
+                linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Add a metallic texture effect */
+.products {
+    background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.1) 10px);
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.3);
+}
+
+/* Ensure footer blends well */
+footer {
+    background: linear-gradient(to top, #0d0d0d, #1a1a1a);
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #00ffcc;
+    margin-right: 20px;
+}
+
+.logo img {
+    height: 50px;
+    display: block;
+    margin-right: 10px;
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    color: #00ffcc;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+    background-image: linear-gradient(to bottom, #1a1a1a, #0d0d0d);
+    background-size: 100% 250px;
+    background-position: 0% 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    filter: brightness(0.7);
+    object-fit: cover;
+}
+
+.hero .intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 15px;
+    animation: popUp 2s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Products Section */
+.products {
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.categories,
+.featured-products {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.category,
+.featured-product {
+    background-color: #1a1a1a;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #00ffcc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 200px;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.category:hover,
+.featured-product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+.featured-product img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Carousel Controls */
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.carousel-controls button {
+    padding: 10px 20px;
+    background-color: #00ffcc;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-controls button:hover {
+    background-color: #00cca3;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    animation: slideIn 1s ease-out;
+    border-top: 2px solid #333;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer a:hover {
+    color: #00ffcc;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+footer .contact-info p {
+    margin: 5px 0;
+}
+
+footer .social-media {
+    display: flex;
+    gap: 15px;
+}
+
+/* Keyframes for animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popUp {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animated Tile Styles */
+.animated-tile {
+    width: 100%;
+    overflow: hidden;
+    position: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    margin: 20px 0; /* Space above and below the tile */
+}
+
+.tile-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: fadeInUp 2s ease forwards;
+}
+
+.tile-content p {
+    display: inline;
+    color: #00ffcc;
+    font-size: 24px;
+    margin: 0;
+    padding-left: 100%; /* Start position off-screen */
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .tile-content p {
+        font-size: 18px;
+    }
+}
+/* Animated Text within .intro */
+.intro {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.intro h1,
+.intro p {
+    opacity: 0;
+    animation: fadeInUp 2s ease forwards;
+}
+
+.intro h1 {
+    font-size: 48px;
+    color: #00ffcc;
+    animation-delay: 0s; /* Starts immediately */
+}
+
+.intro p {
+    font-size: 24px;
+    color: #ffffff;
+    animation-delay: 0.5s; /* Starts after 0.5 seconds */
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Moves text 20px down */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Moves text to original position */
+    }
+}
+
+/* Animate "Product Categories" Heading */
+.products h2 {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 1s; /* Starts after the intro text animation */
+    text-align: center;
+    font-size: 36px;
+    color: url(../../Downloads/Home.html) url(../../Downloads/Home_Styles.css) url(../../Downloads/Home_Scripts.js);
+    margin-bottom: 20px;
+}
+
+/* Animate Category Items */
+.categories .category {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1.5s;
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Staggered Animation for Category Items */
+.categories .category:nth-child(1) {
+    animation-delay: 1.5s;
+}
+
+.categories .category:nth-child(2) {
+    animation-delay: 1.7s;
+}
+
+.categories .category:nth-child(3) {
+    animation-delay: 1.9s;
+}
+
+/* Hover Effect for Categories */
+.categories .category:hover {
+    background-color: #00ffcc;
+    color: #1a1a1a;
+}
+
+/* Keyframes for fadeInUp animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start 20px below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Contact Details Section Styling */
+.contact-details {
+    padding: 50px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    margin: 40px 0;
+    text-align: center;
+    opacity: 0; /* Start hidden */
+    animation: fadeInUp 1.5s ease forwards;
+    animation-delay: 0.5s; /* Delay to start after scrolling */
+}
+
+/* Animate Contact Details Heading */
+.contact-details h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00ffcc, #ff00cc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientShift 5s ease-in-out infinite;
+}
+
+/* Animate Contact Details Paragraphs */
+.contact-details p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+/* Staggered Animation for Paragraphs */
+.contact-details p:nth-child(2) {
+    animation-delay: 0.7s;
+}
+
+.contact-details p:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+.contact-details p:nth-child(4) {
+    animation-delay: 1.1s;
+}
+
+/* Keyframes for fadeInUp Animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Start 20px below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+
+/* Keyframes for Gradient Shift Animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Styling for Email Link */
+.contact-details a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #ff00cc;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .contact-details {
+        padding: 30px;
+    }
+
+    .contact-details h2 {
+        font-size: 28px;
+    }
+
+    .contact-details p {
+        font-size: 16px;
+    }
+}
+
+/* Accessibility for Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .contact-details,
+    .contact-details p {
+        animation: none;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enable Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Contact Details Section Styling */
+.contact-details {
+    padding: 50px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 10px;
+    margin: 40px auto; /* Center the section itself */
+    max-width: 800px; /* Control the width */
+    display: flex; /* Use Flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center-align children horizontally */
+    text-align: center; /* Center-align text */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start 20px below */
+}
+
+/* Gradient Heading */
+.contact-details h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #00ffcc, #ff00cc);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientShift 5s ease-in-out infinite;
+}
+
+/* Paragraph Styling */
+.contact-details p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Staggered Animation for Paragraphs */
+.contact-details p:nth-child(2) {
+    transition-delay: 0.7s;
+}
+
+.contact-details p:nth-child(3) {
+    transition-delay: 0.9s;
+}
+
+.contact-details p:nth-child(4) {
+    transition-delay: 1.1s;
+}
+
+/* Keyframes for Gradient Shift Animation */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Styling for Email Link */
+.contact-details a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #ff00cc;
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    .contact-details {
+        padding: 30px;
+    }
+
+    .contact-details h2 {
+        font-size: 28px;
+    }
+
+    .contact-details p {
+        font-size: 16px;
+    }
+}
+
+/* Accessibility for Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .contact-details,
+    .contact-details p {
+        animation: none;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Featured Products Styling */
+.featured-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.featured-product {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+
+.featured-product img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.featured-product h3 {
+    margin-top: 10px;
+}
+
+.featured-product p {
+    margin-top: 5px;
+}
+
+/* Futuristic Frames Styling */
+#futuristic-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .image-frame {
+    position: relative;
+    padding: 10px;
+    border: 3px solid #00ffcc;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .image-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .image-frame:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.8);
+  }
+
+  .home-label {
+    position: absolute;
+    top: 45px; /* Align with header padding */
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #1a1a1a;
+    padding: 5px 10px;
+    border: 3px solid #00ffcc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+.image-frame {
+    position: relative;
+    padding: 10px;
+    border: 3px solid #00ffcc;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px; /* Set a fixed width */
+    height: 200px; /* Set a fixed height */
+    overflow: hidden; /* Prevent overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire frame while maintaining aspect ratio */
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 60vh; /* Full viewport height */
+    width: 100%; /* Full width */
+    position: relative;
+}
+
+.intro {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    padding: 20px 40px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 0 20px cyan(0, 255, 204, 0.5); /* Glow effect */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Perfect centering */
+}
+
+.intro h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #00ffcc; /* Neon blue text */
+    text-shadow: 0 0 10px rgba(0, 255, 204, 0.8); /* Glow effect */
+}
+
+.intro p {
+    font-size: 18px;
+    color: #fff;
+}
+
+
+/* Global Styles */
+.listing {
+    background-color: rgb(33, 33, 33); /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+}
+
+/* Card Container */
+
+/* Neon Title */
+.listing-title {
+    font-size: 36px;
+    color: cyan(0, 0, 0);
+    text-shadow: 0px 0px 10px cyan, 0px 0px 20px cyan;
+    font-weight: bold;
+}
+
+/* Subtitle */
+.listing-subtitle {
+    font-size: 18px;
+    color: white;
+}
